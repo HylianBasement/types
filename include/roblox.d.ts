@@ -1308,6 +1308,9 @@ interface TimeValueTable {
 	Millisecond: number;
 }
 
+/** Describes a valid locale time string for `DateTime` */
+type LocaleTime = "en-us" | "zh-cn";
+
 /**
  * A DateTime represents a moment in time using a [Unix timestamp](https://en.wikipedia.org/wiki/Unix_time).
  * It can be used to easily format dates and times in specific locales.
@@ -1358,7 +1361,7 @@ interface DateTime {
 	 * @param format
 	 * @param locale
 	 */
-	FormatUniversalTime(this: DateTime, format: string, locale: string): string;
+	FormatUniversalTime(this: DateTime, format: string, locale: LocaleTime): string;
 
 	/**
 	 * Generates a string from the DateTime value interpreted as local time and a format string.
@@ -1367,7 +1370,7 @@ interface DateTime {
 	 * @param format
 	 * @param locale
 	 */
-	FormatLocalTime(this: DateTime, format: string, locale: string): string;
+	FormatLocalTime(this: DateTime, format: string, locale: LocaleTime): string;
 }
 
 interface DateTimeConstructor {
