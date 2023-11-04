@@ -60,6 +60,8 @@ declare interface Vector3 {
 	mul(this: Vector3, other: Vector3 | number): Vector3;
 	/** macro for Vector3 / Vector3 | number */
 	div(this: Vector3, other: Vector3 | number): Vector3;
+	/** macro for Vector3 // Vector3 | number */
+	idiv(this: Vector3, other: Vector3 | number): Vector3;
 }
 
 declare interface Vector3int16 {
