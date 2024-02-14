@@ -1216,3 +1216,8 @@ interface WorldRoot extends Model {
 	): Array<BasePart>;
 	GetPartsInPart(this: WorldRoot, part: BasePart, overlapParams?: OverlapParams): Array<BasePart>;
 }
+
+interface CaptureService extends Instance {
+	CaptureScreenshot(this: CaptureService, onCaptureReady: (contentId: string) => void): void;
+	PromptSaveCapturesToGallery(this: CaptureService, contentIds: ReadonlyArray<string>, resultCallback: (result: Set<string>) => void): void;
+}
